@@ -1,10 +1,10 @@
-# 🏋️ Fitness Training SQL Project
+# 🏋️ Fitness Analytics Dashboard (SQL + Power BI)
 
-## 📌 Overview
+## 📊 Project Overview
 
-This project simulates a fitness training business database to analyze customer activity, trainer performance, and overall engagement trends.
+This project simulates a fitness training business to analyze customer engagement, session behavior, and trainer workload using **SQL and Power BI**.
 
-The goal is to demonstrate real-world SQL skills used in data analysis, progressing from basic queries to advanced analytical techniques.
+The goal is to demonstrate end-to-end analytical skills — from data modeling and querying to visualization and business insights.
 
 ---
 
@@ -12,16 +12,14 @@ The goal is to demonstrate real-world SQL skills used in data analysis, progress
 
 The database consists of three main tables:
 
-* **customers** → stores customer information
-* **trainers** → stores trainer information
-* **training_sessions** → tracks each training session
+* `customers` → stores customer information
+* `trainers` → stores trainer information
+* `training_sessions` → tracks each training session
 
-### Relationships:
+Each training session is linked to:
 
-* Each session is linked to:
-
-  * one customer
-  * one trainer
+* one customer
+* one trainer
 
 ---
 
@@ -29,50 +27,42 @@ The database consists of three main tables:
 
 * `schema.sql` → Creates tables and defines relationships
 * `data.sql` → Inserts structured sample data
-* `queries.sql` → Contains analytical SQL queries (beginner → advanced)
+* `queries.sql` → Analytical SQL queries (basic → advanced)
+* `fitness-dashboard.pbit` → Power BI dashboard
+* `dashboard-preview.png` → Dashboard screenshot
 * `README.md` → Project documentation
 
 ---
 
-## 🧠 SQL Skills Demonstrated
+## 🛠️ Tools Used
 
-This project showcases a range of SQL concepts:
+* SQL (data modeling, querying, analysis)
+* Power BI (dashboard and visualization)
+* DAX (basic measures and calculations)
 
-* JOINs (combining multiple tables)
-* Aggregations (SUM, COUNT, AVG)
-* GROUP BY
-* Subqueries
-* Common Table Expressions (CTEs)
-* Window Functions (RANK, DENSE_RANK, running totals)
-* Data analysis and ranking techniques
+---
+
+## 📈 Dashboard Preview
+
+![Dashboard](dashboard-preview.png)
+
+---
+
+## 🧠 Key Insights
+
+* A small group of customers contributes a large share of total training time, indicating that engagement is concentrated among high-activity users.
+* Trainer workload is unevenly distributed, with certain trainers handling a significantly higher volume of sessions than others.
 
 ---
 
 ## 📊 Business Questions Answered
 
-### 1. Who are the most active customers?
-
-Calculates total training time per customer.
-
-### 2. Which trainer handles the most sessions?
-
-Evaluates trainer workload and engagement.
-
-### 3. Which customers train above average?
-
-Uses CTEs and subqueries to compare against overall averages.
-
-### 4. Who are the top-performing customers?
-
-Ranks customers based on total training time using window functions.
-
-### 5. How does training accumulate over time?
-
-Tracks running totals of session duration per customer.
-
-### 6. Which trainer does each customer prefer?
-
-Identifies the most frequently used trainer per customer.
+1. Who are the most active customers?
+2. Which trainer handles the most sessions?
+3. Which customers train above average?
+4. Who are the top-performing customers?
+5. How does training accumulate over time?
+6. Which trainer does each customer prefer?
 
 ---
 
@@ -90,37 +80,37 @@ GROUP BY c.name;
 
 ---
 
-## 📈 Key Insights (Example)
+## 🎯 Key Metrics (Dashboard)
 
-* Some customers consistently train more than others, indicating higher engagement
-* Trainer workloads are unevenly distributed across sessions
-* A small group of customers contributes the majority of training time
-
----
-
-## 🛠 How to Run This Project
-
-1. Run `schema.sql` to create tables
-2. Run `data.sql` to insert data
-3. Run queries from `queries.sql` to perform analysis
+* Total Sessions
+* Average Session Duration (Min)
+* Total Training Time (Min)
 
 ---
 
 ## 🎯 Purpose
 
-This project is part of a learning journey toward becoming a data analyst. It demonstrates the ability to:
+This project demonstrates the ability to:
 
 * Design relational databases
-* Write structured and efficient SQL queries
-* Analyze and interpret data using real-world scenarios
+* Write structured SQL queries
+* Build interactive dashboards
+* Translate data into business insights
+
+---
+
+## 🚀 Project Highlights
+
+* Built a structured Power BI dashboard with KPIs, trends, and workload analysis
+* Applied DAX for calculated metrics and filtering logic
+* Designed with consistent layout, spacing, and business-focused storytelling
 
 ---
 
 ## 📌 Future Improvements
 
-* Add customer signup tracking for retention analysis
+* Add customer retention tracking
 * Include revenue metrics per session
-* Build a dashboard (Power BI / Tableau)
 * Expand dataset for deeper trend analysis
 
 ---
@@ -128,5 +118,3 @@ This project is part of a learning journey toward becoming a data analyst. It de
 ## 👤 Author
 
 Ernesto
-
----
