@@ -44,7 +44,7 @@ Each training session is linked to:
 
 ## 📈 Dashboard Preview
 
-![Dashboard](dashboard-preview.png)
+![Dashboard](dashboard.png)
 
 ---
 
